@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import com.mindorks.sample.whatsapp.R
 import com.mindorks.sample.whatsapp.ui.WhatsAppTheme
 
 class SplashFragment : Fragment() {
@@ -20,7 +22,7 @@ class SplashFragment : Fragment() {
             setContent {
                 WhatsAppTheme {
                     SplashView{
-
+                        findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
                     }
                 }
             }
