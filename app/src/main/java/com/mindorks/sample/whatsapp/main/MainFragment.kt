@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment
 import com.mindorks.sample.whatsapp.main.util.TabScreen
 import com.mindorks.sample.whatsapp.main.view.ScreenState
 import com.mindorks.sample.whatsapp.main.view.TabsPanel
+import com.mindorks.sample.whatsapp.main.view.call.CallsView
 import com.mindorks.sample.whatsapp.ui.WhatsAppTheme
 
 class MainFragment : Fragment() {
@@ -49,6 +50,7 @@ class MainFragment : Fragment() {
             Surface {
                 when (screenState.state) {
                     ScreenState.Screen.CALLS -> {
+                        CallsView()
                     }
                     ScreenState.Screen.CHATS -> {
 
