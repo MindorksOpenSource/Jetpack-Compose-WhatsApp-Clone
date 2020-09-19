@@ -8,6 +8,5 @@ import com.mindorks.sample.whatsapp.data.local.calls
 fun CallsView() {
     LazyColumnFor(calls) { call ->
         CallItem(call)
-
     }
 }
