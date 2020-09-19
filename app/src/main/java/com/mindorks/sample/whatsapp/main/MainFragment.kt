@@ -29,11 +29,10 @@ class MainFragment : Fragment() {
             setContent {
                 WhatsAppTheme {
                     onScreenSelected(
-                        ScreenState(ScreenState.Screen.CALLS),
-                        {
-
-                        }
-                    )
+                        ScreenState(ScreenState.Screen.CALLS)
+                    ) {
+                        //ViewModel for navigation
+                    }
 
                 }
             }
