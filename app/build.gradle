@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion "android-R"
+    compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.mindorks.sample.whatsapp"
-        minSdkVersion "R"
-        targetSdkVersion "R"
+        minSdkVersion 21
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
