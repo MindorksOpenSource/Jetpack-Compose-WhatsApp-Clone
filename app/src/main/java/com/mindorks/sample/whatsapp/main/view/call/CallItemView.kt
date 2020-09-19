@@ -16,6 +16,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mindorks.sample.whatsapp.data.model.Call
 import com.mindorks.sample.whatsapp.util.ImageLoader
+import com.mindorks.sample.whatsapp.util.colorGreen
+import com.mindorks.sample.whatsapp.util.colorLightGreen
 
 @Composable
 fun CallItem(call: Call) {
@@ -32,7 +34,7 @@ fun CallItem(call: Call) {
                     call.time,
                     style = TextStyle(
                         fontSize = 12.sp,
-                        color = Color.Gray,
+                        color = colorGreen(),
                         textAlign = TextAlign.Center
                     ),
                     maxLines = 1,

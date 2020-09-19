@@ -1,22 +1,23 @@
 package com.mindorks.sample.whatsapp.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Surface
+import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
-import com.mindorks.sample.whatsapp.main.util.TabScreen
 import com.mindorks.sample.whatsapp.main.view.ScreenState
 import com.mindorks.sample.whatsapp.main.view.TabsPanel
 import com.mindorks.sample.whatsapp.main.view.call.CallsView
 import com.mindorks.sample.whatsapp.ui.WhatsAppTheme
+import com.mindorks.sample.whatsapp.util.colorTopBar
 
 class MainFragment : Fragment() {
 
@@ -46,6 +47,7 @@ class MainFragment : Fragment() {
         onNavigate: (ScreenState.Screen) -> Unit
     ) {
         Column {
+            TopAppBar(title = { Text("WhatsApp",color = Color.White)}, backgroundColor = colorTopBar(),elevation = 0.dp)
             TabsPanel(screenState, onNavigate)
             Surface {
                 when (screenState.state) {
