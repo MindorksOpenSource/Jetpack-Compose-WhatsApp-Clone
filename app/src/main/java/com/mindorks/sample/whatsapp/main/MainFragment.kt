@@ -40,21 +40,16 @@ class MainFragment : Fragment() {
 
             setContent {
                 WhatsAppTheme {
-                    onScreenSelected(
-                        ScreenState(ScreenState.Screen.CALLS)
-                    ) {
+                    onScreenSelected {
                         viewModel.navigateTo(it)
                     }
-
                 }
             }
         }
     }
 
     @Composable
-    private fun onScreenSelected(
-        initialScreenState: ScreenState,
-        onNavigate: (ScreenState.Screen) -> Unit
+    private fun onScreenSelected(onNavigate: (ScreenState.Screen) -> Unit
     ) {
         val screenState: State<ScreenState?> = viewModel.screenState.observeAsState(viewModel.screenState.value)
 
@@ -64,18 +59,14 @@ class MainFragment : Fragment() {
                 backgroundColor = colorTopBar(),
                 elevation = 0.dp
             )
-            TabsPanel(screenState.value ?: initialScreenState, onNavigate)
+            screenState.value?.let { TabsPanel(it, onNavigate) }
             Surface {
                 when (screenState.value?.state) {
-                    ScreenState.Screen.CALLS -> {
-                        CallsView()
-                    }
-                    ScreenState.Screen.CHATS -> {
-                        ChatsView()
-                    }
-                    ScreenState.Screen.STATUS -> {
-                        StatusView()
-                    }
+                    ScreenState.Screen.CALLS -> CallsView()
+
+                    ScreenState.Screen.CHATS -> ChatsView()
+
+                    ScreenState.Screen.STATUS -> StatusView()
                 }
             }
         }
