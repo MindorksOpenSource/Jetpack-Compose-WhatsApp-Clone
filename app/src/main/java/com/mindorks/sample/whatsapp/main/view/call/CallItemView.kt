@@ -8,7 +8,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -17,13 +16,12 @@ import androidx.compose.ui.unit.sp
 import com.mindorks.sample.whatsapp.data.model.Call
 import com.mindorks.sample.whatsapp.util.ImageLoader
 import com.mindorks.sample.whatsapp.util.colorGreen
-import com.mindorks.sample.whatsapp.util.colorLightGreen
 
 @Composable
 fun CallItem(call: Call) {
     val padding = 16.dp
     Column(Modifier.padding(padding).fillMaxWidth()) {
-        Row(verticalGravity =  Alignment.CenterVertically) {
+        Row(verticalGravity = Alignment.CenterVertically) {
 
             Box(shape = CircleShape, modifier = Modifier.size(40.dp)) {
                 ImageLoader(call.imageUrl)
@@ -41,8 +39,8 @@ fun CallItem(call: Call) {
                     overflow = TextOverflow.Ellipsis
                 )
             }
-            Box(modifier = Modifier.fillMaxWidth(),gravity = ContentGravity.CenterEnd) {
-                ImageLoader(call.voiceStatus,  modifier = Modifier)
+            Box(modifier = Modifier.fillMaxWidth(), gravity = ContentGravity.CenterEnd) {
+                ImageLoader(call.voiceStatus, modifier = Modifier)
             }
         }
     }

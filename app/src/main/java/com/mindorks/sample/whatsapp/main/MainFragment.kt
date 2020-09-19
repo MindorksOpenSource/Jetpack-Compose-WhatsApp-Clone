@@ -22,6 +22,7 @@ import com.mindorks.sample.whatsapp.main.view.MainViewModel
 import com.mindorks.sample.whatsapp.main.view.ScreenState
 import com.mindorks.sample.whatsapp.main.view.TabsPanel
 import com.mindorks.sample.whatsapp.main.view.call.CallsView
+import com.mindorks.sample.whatsapp.main.view.chats.ChatsView
 import com.mindorks.sample.whatsapp.ui.WhatsAppTheme
 import com.mindorks.sample.whatsapp.util.colorTopBar
 
@@ -69,7 +70,7 @@ class MainFragment : Fragment() {
                         CallsView()
                     }
                     ScreenState.Screen.CHATS -> {
-
+                        ChatsView()
                     }
                     ScreenState.Screen.STATUS -> {
 
