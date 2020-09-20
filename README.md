@@ -8,9 +8,9 @@
 
 ## About this project (Jetpack Compose WhatsApp Clone):
 * If you want to get started with Jetpack Compose, then this project is for you.
-* Common use-cases of Jetpack Compose has been implemented in this project.
+* Common use-cases of Jetpack Compose has been implemented in this project like working with List, Using Coroutines, etc.
 * Also, learn to work with multiple screens in Jetpack Compose.
-* We are using dev10 version of Jetpack Compose to design WhatsApp Clone, we will keep it updating based on the new releases.
+* We are using `1.0.0-alpha01` version of Jetpack Compose to design WhatsApp Clone, we will keep it updating based on the new releases.
 
 ## Steps to learn Jetpack Compose from this project
 * First, learn the concepts of Jetpack Compose from this **[blog.](https://blog.mindorks.com/using-jetpack-compose-to-build-ui-in-android)**
@@ -23,9 +23,8 @@
 * How to work with Lists?
 * How to work with Tabs?
 * How to build TopAppBar and work with different Containers?
-* How to work with Constraint Layout in Jetpack Compose?
 * How to load images from Drawable and Url?
-* How to work with ProvidableAmbient?
+* How to work with Coroutines in Compose?
 * How to manage state in Jetpack Compose?
 * How to write test cases in Jetpack Compose?
 * How to work with LiveData in Jetpack Compose?
