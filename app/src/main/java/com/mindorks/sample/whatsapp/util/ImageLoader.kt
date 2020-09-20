@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
@@ -188,6 +189,20 @@ fun ImageLoader(@DrawableRes imageUrl: Int, modifier: Modifier) {
         Image(
             asset = it,
             modifier = Modifier.size(12.dp) + modifier,
+            contentScale = ContentScale.Fit
+        )
+    }
+}
+@Composable
+fun ImageLoader(@DrawableRes imageUrl: Int,modifier: Modifier,onClick:()->Unit) {
+
+    val vectorAsset = loadVectorResource(imageUrl)
+    vectorAsset.resource.resource?.let {
+        Image(
+            asset = it,
+            modifier = Modifier.size(24.dp)+modifier.clickable {
+                onClick()
+            },
             contentScale = ContentScale.Fit
         )
     }

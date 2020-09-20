@@ -1,7 +1,6 @@
 package com.mindorks.sample.whatsapp.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +16,7 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.mindorks.sample.whatsapp.R
 import com.mindorks.sample.whatsapp.main.view.MainViewModel
 import com.mindorks.sample.whatsapp.main.view.ScreenState
@@ -49,9 +49,11 @@ class MainFragment : Fragment() {
     }
 
     @Composable
-    private fun onScreenSelected(onNavigate: (ScreenState.Screen) -> Unit
+    private fun onScreenSelected(
+        onNavigate: (ScreenState.Screen) -> Unit
     ) {
-        val screenState: State<ScreenState?> = viewModel.screenState.observeAsState(viewModel.screenState.value)
+        val screenState: State<ScreenState?> =
+            viewModel.screenState.observeAsState(viewModel.screenState.value)
 
         Column {
             TopAppBar(
@@ -64,7 +66,13 @@ class MainFragment : Fragment() {
                 when (screenState.value?.state) {
                     ScreenState.Screen.CALLS -> CallsView()
 
-                    ScreenState.Screen.CHATS -> ChatsView()
+                    ScreenState.Screen.CHATS -> ChatsView {
+                        val action = MainFragmentDirections.actionMainFragmentToChatFragment(
+                            it.name,
+                            it.imageUrl
+                        )
+                        findNavController().navigate(action)
+                    }
 
                     ScreenState.Screen.STATUS -> StatusView()
                 }

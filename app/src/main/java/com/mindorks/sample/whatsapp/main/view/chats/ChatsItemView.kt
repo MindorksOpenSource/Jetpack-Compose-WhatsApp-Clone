@@ -2,6 +2,7 @@ package com.mindorks.sample.whatsapp.main.view.chats
 
 import androidx.compose.foundation.Box
 import androidx.compose.foundation.Text
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
@@ -13,21 +14,19 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mindorks.sample.whatsapp.data.model.Chat
+import com.mindorks.sample.whatsapp.data.model.User
 import com.mindorks.sample.whatsapp.util.ImageLoader
 import com.mindorks.sample.whatsapp.util.colorGreen
 import com.mindorks.sample.whatsapp.util.colorLightGreen
 
 @Composable
-fun ChatsItemView(chat: Chat) {
+fun ChatsItemView(chat: Chat, loadNextScreen: (User) -> Unit) {
     Box(
-        modifier = Modifier.fillMaxWidth() + Modifier.padding(top = 4.dp, bottom = 4.dp)
-    ) {
+        modifier = Modifier.fillMaxWidth()
+            .clickable { loadNextScreen(User(id = 2,chat.name,chat.url)) } + Modifier.padding(top = 4.dp, bottom = 4.dp)) {
         Row(modifier = Modifier.padding(10.dp)) {
-            Row(modifier = Modifier.weight(0.5f, true)) {
-                Box(shape = CircleShape, modifier = Modifier.size(40.dp)) {
-                    ImageLoader(chat.url)
-
-                }
+            Box(shape = CircleShape, modifier = Modifier.size(40.dp)) {
+                ImageLoader(chat.url)
             }
             Spacer(modifier = Modifier.preferredSize(12.dp))
             Column(modifier = Modifier.weight(3.0f, true)) {

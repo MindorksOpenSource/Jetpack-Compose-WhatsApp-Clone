@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation.xml"
     app:startDestination="@id/splashFragment">
 
@@ -15,5 +16,20 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.mindorks.sample.whatsapp.main.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_chatFragment"
+            app:destination="@id/chatFragment" >
+            <argument
+                android:name="userName"
+                app:argType="string" />
+            <argument
+                android:name="userImage"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.mindorks.sample.whatsapp.chat.ChatFragment"
+        android:label="fragment_chat" />
 </navigation>
