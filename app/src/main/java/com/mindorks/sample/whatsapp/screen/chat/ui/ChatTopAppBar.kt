@@ -1,4 +1,4 @@
-package com.mindorks.sample.whatsapp.chat.ui
+package com.mindorks.sample.whatsapp.screen.chat.ui
 
 import androidx.compose.foundation.Box
 import androidx.compose.foundation.Icon

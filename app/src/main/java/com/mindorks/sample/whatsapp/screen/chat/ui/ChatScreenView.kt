@@ -1,4 +1,4 @@
-package com.mindorks.sample.whatsapp.chat.ui
+package com.mindorks.sample.whatsapp.screen.chat.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.Scaffold
@@ -8,9 +8,9 @@ import com.mindorks.sample.whatsapp.data.model.User
 
 @ExperimentalFoundationApi
 @Composable
-fun ChatScreenView(user: User,onBackIconClick:()->Unit) {
+fun ChatScreenView(user: User,onBackIconClick:()->Unit,onMessageSend:(String)->Unit) {
     Scaffold(
-        bottomBar = { EditText() },
+        bottomBar = { EditText(onMessageSend) },
         topBar = {
             ChatTopBar(user,onBackIconClick)
         },

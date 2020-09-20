@@ -1,7 +1,6 @@
-package com.mindorks.sample.whatsapp.splash
+package com.mindorks.sample.whatsapp.screen.splash
 
 
-import androidx.annotation.ColorRes
 import androidx.compose.foundation.Box
 import androidx.compose.foundation.ContentGravity
 import androidx.compose.foundation.Image
@@ -10,7 +9,6 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.launchInComposition
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.vectorResource
 import com.mindorks.sample.whatsapp.R

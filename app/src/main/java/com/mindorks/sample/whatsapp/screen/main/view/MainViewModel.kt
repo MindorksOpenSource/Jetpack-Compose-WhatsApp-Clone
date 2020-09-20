@@ -1,4 +1,4 @@
-package com.mindorks.sample.whatsapp.main.view
+package com.mindorks.sample.whatsapp.screen.main.view
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.mindorks.sample.whatsapp.main.view.chats
+package com.mindorks.sample.whatsapp.screen.main.view.chats
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.lazy.LazyColumnFor

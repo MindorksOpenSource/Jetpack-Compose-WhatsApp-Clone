@@ -1,4 +1,4 @@
-package com.mindorks.sample.whatsapp.chat.ui
+package com.mindorks.sample.whatsapp.screen.chat.ui
 
 import androidx.compose.foundation.Box
 import androidx.compose.foundation.Text
@@ -20,13 +20,13 @@ import com.mindorks.sample.whatsapp.util.colorLightGreen
 fun ChatsScrollView(chat: List<UserChat>) {
     LazyColumnFor(
         chat,
-        modifier = Modifier.fillMaxHeight().background(color = colorLightGreen()).padding(10.dp)
-    ) { chat ->
-        if (chat.id == 2) {
-            setupReceipientChat(chat)
+        modifier = Modifier.fillMaxHeight().background(color = colorLightGreen()).padding(10.dp).padding(bottom = 40.dp)
+    ) { it ->
+        if (it.id == 2) {
+            setupReceipientChat(it)
             Spacer(modifier = Modifier.padding(8.dp))
         } else {
-            setupMyChat(chat)
+            setupMyChat(it)
             Spacer(modifier = Modifier.padding(8.dp))
         }
     }

@@ -1,4 +1,4 @@
-package com.mindorks.sample.whatsapp.main
+package com.mindorks.sample.whatsapp.screen.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,12 +18,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.mindorks.sample.whatsapp.R
-import com.mindorks.sample.whatsapp.main.view.MainViewModel
-import com.mindorks.sample.whatsapp.main.view.ScreenState
-import com.mindorks.sample.whatsapp.main.view.TabsPanel
-import com.mindorks.sample.whatsapp.main.view.call.CallsView
-import com.mindorks.sample.whatsapp.main.view.chats.ChatsView
-import com.mindorks.sample.whatsapp.main.view.status.StatusView
+import com.mindorks.sample.whatsapp.screen.main.view.MainViewModel
+import com.mindorks.sample.whatsapp.screen.main.view.ScreenState
+import com.mindorks.sample.whatsapp.screen.main.view.TabsPanel
+import com.mindorks.sample.whatsapp.screen.main.view.call.CallsView
+import com.mindorks.sample.whatsapp.screen.main.view.chats.ChatsView
+import com.mindorks.sample.whatsapp.screen.main.view.status.StatusView
 import com.mindorks.sample.whatsapp.ui.WhatsAppTheme
 import com.mindorks.sample.whatsapp.util.colorTopBar
 

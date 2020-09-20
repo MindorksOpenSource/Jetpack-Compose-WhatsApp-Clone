@@ -1,6 +1,7 @@
-package com.mindorks.sample.whatsapp.main.view.status
+package com.mindorks.sample.whatsapp.screen.main.view.call
 
 import androidx.compose.foundation.Box
+import androidx.compose.foundation.ContentGravity
 import androidx.compose.foundation.Text
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -12,23 +13,23 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.mindorks.sample.whatsapp.data.model.Status
+import com.mindorks.sample.whatsapp.data.model.Call
 import com.mindorks.sample.whatsapp.util.ImageLoader
 import com.mindorks.sample.whatsapp.util.colorGreen
 
 @Composable
-fun StatusItemView(status: Status) {
+fun CallItem(call: Call) {
     val padding = 16.dp
     Column(Modifier.padding(padding).fillMaxWidth()) {
         Row(verticalGravity = Alignment.CenterVertically) {
 
             Box(shape = CircleShape, modifier = Modifier.size(40.dp)) {
-                ImageLoader(status.imageUrl)
+                ImageLoader(call.imageUrl)
             }
             Column(modifier = Modifier.padding(start = 16.dp)) {
-                Text(status.name)
+                Text(call.name)
                 Text(
-                    status.time,
+                    call.time,
                     style = TextStyle(
                         fontSize = 12.sp,
                         color = colorGreen(),
@@ -37,6 +38,9 @@ fun StatusItemView(status: Status) {
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )
+            }
+            Box(modifier = Modifier.fillMaxWidth(), gravity = ContentGravity.CenterEnd) {
+                ImageLoader(call.voiceStatus, modifier = Modifier)
             }
         }
     }

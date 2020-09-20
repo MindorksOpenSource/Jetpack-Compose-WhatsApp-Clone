@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.mindorks.sample.whatsapp.splash.SplashFragment"
+        android:name="com.mindorks.sample.whatsapp.screen.splash.SplashFragment"
         android:label="SplashFragment" >
         <action
             android:id="@+id/action_splashFragment_to_mainFragment"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.mindorks.sample.whatsapp.main.MainFragment"
+        android:name="com.mindorks.sample.whatsapp.screen.main.MainFragment"
         android:label="MainFragment" >
         <action
             android:id="@+id/action_mainFragment_to_chatFragment"
@@ -30,6 +30,6 @@
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.mindorks.sample.whatsapp.chat.ChatFragment"
+        android:name="com.mindorks.sample.whatsapp.screen.chat.ChatFragment"
         android:label="fragment_chat" />
 </navigation>
