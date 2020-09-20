@@ -11,7 +11,6 @@ import com.mindorks.sample.whatsapp.util.colorTopBar
 
 data class ScreenState(var state: Screen = Screen.CALLS) {
 
-
     enum class Screen(
         val title: String = "Tab"
     ) {
@@ -31,6 +30,7 @@ fun TabsPanel(
             ScreenState.Screen.values().indexOf(screenState.state)
         )
     }
+
     val tabs = ScreenState.Screen.values()
 
     TabRow(
@@ -39,7 +39,7 @@ fun TabsPanel(
         tabs = {
             tabs.forEachIndexed { index, tab ->
                 Tab(
-                    text = { Text(text = tab.title.toUpperCase(),color = Color.White) },
+                    text = { Text(text = tab.title.toUpperCase(), color = Color.White) },
                     selected = index == selectedTab,
                     onClick = {
                         setSelectedTab(index)

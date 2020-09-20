@@ -23,7 +23,7 @@ import com.mindorks.sample.whatsapp.util.ImageLoader
 import com.mindorks.sample.whatsapp.util.colorTopBar
 
 @Composable
-fun ChatTopBar(user: User,onBackIconClick:()->Unit) {
+fun ChatTopBar(user: User, onBackIconClick: () -> Unit) {
 
     Column {
         TopAppBar(

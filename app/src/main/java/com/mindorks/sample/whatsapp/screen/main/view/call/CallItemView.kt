@@ -19,14 +19,16 @@ import com.mindorks.sample.whatsapp.util.colorGreen
 
 @Composable
 fun CallItem(call: Call) {
+
     val padding = 16.dp
+
     Column(Modifier.padding(padding).fillMaxWidth()) {
         Row(verticalGravity = Alignment.CenterVertically) {
 
             Box(shape = CircleShape, modifier = Modifier.size(40.dp)) {
                 ImageLoader(call.imageUrl)
             }
-            Column(modifier = Modifier.padding(start = 16.dp)) {
+            Column(modifier = Modifier.padding(start = padding)) {
                 Text(call.name)
                 Text(
                     call.time,

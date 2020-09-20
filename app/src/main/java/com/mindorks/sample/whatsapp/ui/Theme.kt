@@ -7,28 +7,28 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-        primary = primaryWhatsAppColor,
-        primaryVariant = primaryWhatsAppColor,
-        secondary = primaryWhatsAppColor
+    primary = primaryWhatsAppColor,
+    primaryVariant = primaryWhatsAppColor,
+    secondary = primaryWhatsAppColor
 )
 
 private val LightColorPalette = lightColors(
-        primary = primaryWhatsAppColor,
-        primaryVariant = primaryWhatsAppColor,
-        secondary = primaryWhatsAppColor
+    primary = primaryWhatsAppColor,
+    primaryVariant = primaryWhatsAppColor,
+    secondary = primaryWhatsAppColor
 
-        /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    /* Other default colors to override
+background = Color.White,
+surface = Color.White,
+onPrimary = Color.White,
+onSecondary = Color.Black,
+onBackground = Color.Black,
+onSurface = Color.Black,
+*/
 )
 
 @Composable
-fun WhatsAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+fun WhatsAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
@@ -36,9 +36,9 @@ fun WhatsAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composab
     }
 
     MaterialTheme(
-            colors = colors,
-            typography = typography,
-            shapes = shapes,
-            content = content
+        colors = colors,
+        typography = typography,
+        shapes = shapes,
+        content = content
     )
 }

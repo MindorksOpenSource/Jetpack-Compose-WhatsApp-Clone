@@ -13,27 +13,27 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.mindorks.sample.whatsapp.data.model.UserChat
+import com.mindorks.sample.whatsapp.data.model.Conversation
 import com.mindorks.sample.whatsapp.util.colorLightGreen
 
 @Composable
-fun ChatsScrollView(chat: List<UserChat>) {
+fun ChatsScrollView(chat: List<Conversation>) {
     LazyColumnFor(
         chat,
-        modifier = Modifier.fillMaxHeight().background(color = colorLightGreen()).padding(10.dp).padding(bottom = 40.dp)
-    ) { it ->
+        modifier = Modifier.fillMaxHeight().background(color = colorLightGreen()).padding(10.dp)
+            .padding(bottom = 40.dp)
+    ) {
         if (it.id == 2) {
             setupReceipientChat(it)
-            Spacer(modifier = Modifier.padding(8.dp))
         } else {
             setupMyChat(it)
-            Spacer(modifier = Modifier.padding(8.dp))
         }
+        Spacer(modifier = Modifier.padding(8.dp))
     }
 }
 
 @Composable
-fun setupMyChat(chat: UserChat) {
+fun setupMyChat(chat: Conversation) {
     Box(
         backgroundColor = Color(38, 82, 72),
         modifier = Modifier.fillMaxWidth() + Modifier.padding(80.dp, end = 10.dp),
@@ -56,7 +56,7 @@ fun setupMyChat(chat: UserChat) {
 }
 
 @Composable
-fun setupReceipientChat(chat: UserChat) {
+fun setupReceipientChat(chat: Conversation) {
     Box(
         backgroundColor = Color(62, 61, 64),
         modifier = Modifier.fillMaxWidth() + Modifier.padding(10.dp, end = 80.dp),

@@ -49,9 +49,8 @@ class MainFragment : Fragment() {
     }
 
     @Composable
-    private fun onScreenSelected(
-        onNavigate: (ScreenState.Screen) -> Unit
-    ) {
+    private fun onScreenSelected(onNavigate: (ScreenState.Screen) -> Unit) {
+
         val screenState: State<ScreenState?> =
             viewModel.screenState.observeAsState(viewModel.screenState.value)
 
@@ -64,6 +63,7 @@ class MainFragment : Fragment() {
             screenState.value?.let { TabsPanel(it, onNavigate) }
             Surface {
                 when (screenState.value?.state) {
+
                     ScreenState.Screen.CALLS -> CallsView()
 
                     ScreenState.Screen.CHATS -> ChatsView {

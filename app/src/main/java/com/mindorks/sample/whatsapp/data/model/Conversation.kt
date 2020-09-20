@@ -1,6 +1,6 @@
 package com.mindorks.sample.whatsapp.data.model
 
-data class UserChat(
+data class Conversation(
     val id: Int,
     val chat: String
 )

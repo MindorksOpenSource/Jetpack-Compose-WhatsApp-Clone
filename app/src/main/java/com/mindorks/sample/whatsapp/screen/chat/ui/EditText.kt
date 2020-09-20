@@ -17,9 +17,11 @@ import com.mindorks.sample.whatsapp.util.colorTopBar
 
 @ExperimentalFoundationApi
 @Composable
-fun EditText(onMessageSend:(String)->Unit) {
+fun EditText(onMessageSend: (String) -> Unit) {
+
     val textState = remember { mutableStateOf(TextFieldValue()) }
-   val  scrollState = rememberScrollState()
+    val scrollState = rememberScrollState()
+
     Box(backgroundColor = colorTopBar()) {
         Row(modifier = Modifier.padding(16.dp).fillMaxWidth()) {
             BaseTextField(

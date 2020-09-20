@@ -8,11 +8,11 @@ import com.mindorks.sample.whatsapp.data.model.User
 
 @ExperimentalFoundationApi
 @Composable
-fun ChatScreenView(user: User,onBackIconClick:()->Unit,onMessageSend:(String)->Unit) {
+fun ChatScreenView(user: User, onBackIconClick: () -> Unit, onMessageSend: (String) -> Unit) {
     Scaffold(
         bottomBar = { EditText(onMessageSend) },
         topBar = {
-            ChatTopBar(user,onBackIconClick)
+            ChatTopBar(user, onBackIconClick)
         },
         bodyContent = {
             ChatsScrollView(chat.toList())

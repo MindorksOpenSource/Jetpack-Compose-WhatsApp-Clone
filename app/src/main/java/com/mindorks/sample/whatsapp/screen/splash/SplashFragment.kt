@@ -20,7 +20,7 @@ class SplashFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 WhatsAppTheme {
-                    SplashView{
+                    SplashView {
                         findNavController().navigate(R.id.action_splashFragment_to_mainFragment)
                     }
                 }

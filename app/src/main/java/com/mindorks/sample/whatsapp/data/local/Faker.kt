@@ -3,8 +3,8 @@ package com.mindorks.sample.whatsapp.data.local
 import com.mindorks.sample.whatsapp.R
 import com.mindorks.sample.whatsapp.data.model.Call
 import com.mindorks.sample.whatsapp.data.model.Chat
+import com.mindorks.sample.whatsapp.data.model.Conversation
 import com.mindorks.sample.whatsapp.data.model.Status
-import com.mindorks.sample.whatsapp.data.model.UserChat
 
 val calls = mutableListOf<Call>().apply {
     add(
@@ -332,23 +332,22 @@ val statusList = mutableListOf<Status>().apply {
 }.toList()
 
 
-val chat = mutableListOf<UserChat>().apply {
-    add(UserChat(1, "Hey"))
-    add(UserChat(2, "Hey"))
-    add(UserChat(1, "Wassup"))
-    add(UserChat(1, "How have you been?"))
-    add(UserChat(2, "I am good"))
-    add(UserChat(1, "Hey"))
-    add(UserChat(2, "Hey"))
-    add(UserChat(1, "Wassup"))
-    add(UserChat(1, "How have you been?"))
-    add(UserChat(2, "I am good"))
-    add(UserChat(1, "Hey"))
-    add(UserChat(2, "Hey"))
-    add(UserChat(1, "Wassup"))
-    add(UserChat(1, "How have you been?"))
-    add(UserChat(2, "I am good"))
-
+val chat = mutableListOf<Conversation>().apply {
+    add(Conversation(1, "Hey"))
+    add(Conversation(2, "Hey"))
+    add(Conversation(1, "Wassup"))
+    add(Conversation(1, "How have you been?"))
+    add(Conversation(2, "I am good"))
+    add(Conversation(1, "Hey"))
+    add(Conversation(2, "Hey"))
+    add(Conversation(1, "Wassup"))
+    add(Conversation(1, "How have you been?"))
+    add(Conversation(2, "I am good"))
+    add(Conversation(1, "Hey"))
+    add(Conversation(2, "Hey"))
+    add(Conversation(1, "Wassup"))
+    add(Conversation(1, "How have you been?"))
+    add(Conversation(2, "I am good"))
 }
 
-fun addChat(text: String) = chat.add(UserChat(1, text))
+fun addChat(text: String) = chat.add(Conversation(1, text))

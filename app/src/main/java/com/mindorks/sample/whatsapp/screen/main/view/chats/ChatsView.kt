@@ -12,7 +12,7 @@ import com.mindorks.sample.whatsapp.util.colorLightGreen
 @Composable
 fun ChatsView(loadNextScreen: (User) -> Unit) {
     LazyColumnFor(chatsList, modifier = Modifier.background(color = colorLightGreen())) { chat ->
-        ChatsItemView(chat,loadNextScreen)
+        ChatsItemView(chat, loadNextScreen)
         Divider()
     }
 }
