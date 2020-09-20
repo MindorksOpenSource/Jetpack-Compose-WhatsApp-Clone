@@ -27,7 +27,9 @@ class ChatFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 WhatsAppTheme {
-                    ChatScreenView(User(2, userName, userImage))
+                    ChatScreenView(User(2, userName, userImage)){
+                        requireActivity().onBackPressed()
+                    }
                 }
             }
         }
