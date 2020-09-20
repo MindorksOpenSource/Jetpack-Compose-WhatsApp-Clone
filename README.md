@@ -14,7 +14,6 @@
 
 ## Steps to learn Jetpack Compose from this project
 * First, learn the concepts of Jetpack Compose from this **[blog.](https://blog.mindorks.com/using-jetpack-compose-to-build-ui-in-android)**
-* [You can also watch this video to get started.](https://www.youtube.com/watch?v=JdTtRkT03gY)
 * Then, just clone, build, run the project and start learning Jetpack Compose by building WhatsApp.
 
 ## This Jetpack Compose WhatsApp Clone Project will help you in learning the following for Android App Development:
@@ -33,7 +32,6 @@
 * [Using Jetpack Compose to build UI in Android](https://blog.mindorks.com/using-jetpack-compose-to-build-ui-in-android)
 * [Using Constraint Layout in Jetpack Compose](https://blog.mindorks.com/constraint-layout-in-jetpack-compose)
 * [State Management in Jetpack Compose](https://blog.mindorks.com/state-management-in-jetpack-compose)
-* [Android Jetpack Compose Tutorial - A modern toolkit for building native Android UI](https://www.youtube.com/watch?v=JdTtRkT03gY)
 
 ## Explore Android Online Tutorials and Courses To Learn More by MindOrks
 * [Ride-Sharing Uber Lyft Android App](https://github.com/MindorksOpenSource/ridesharing-uber-lyft-app) - Learn to build a ride-sharing Android Taxi Clone App like Uber, Lyft - Open-Source Project By MindOrks
