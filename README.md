@@ -14,6 +14,7 @@
 
 ## Steps to learn Jetpack Compose from this project
 * First, learn the concepts of Jetpack Compose from this **[blog.](https://blog.mindorks.com/using-jetpack-compose-to-build-ui-in-android)**
+* Learn Jetpack Compose for Android by Examples from this **[project.](https://github.com/MindorksOpenSource/Jetpack-Compose-Android-Examples)**
 * Then, just clone, build, run the project and start learning Jetpack Compose by building WhatsApp.
 
 ## This Jetpack Compose WhatsApp Clone Project will help you in learning the following for Android App Development:
